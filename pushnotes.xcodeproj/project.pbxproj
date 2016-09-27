@@ -12,6 +12,8 @@
 		206A83FE1D9A7AE900FEA34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206A83FC1D9A7AE900FEA34D /* Main.storyboard */; };
 		206A84001D9A7AE900FEA34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 206A83FF1D9A7AE900FEA34D /* Assets.xcassets */; };
 		206A84031D9A7AE900FEA34D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206A84011D9A7AE900FEA34D /* LaunchScreen.storyboard */; };
+		206A840B1D9A7C4F00FEA34D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 206A840A1D9A7C4F00FEA34D /* GoogleService-Info.plist */; };
+		973830946EEE764B8710CFC9 /* Pods_pushnotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E016DE04C11D0862D4D9321A /* Pods_pushnotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		206A83FF1D9A7AE900FEA34D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		206A84021D9A7AE900FEA34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		206A84041D9A7AE900FEA34D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206A840A1D9A7C4F00FEA34D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		206A840C1D9A80DD00FEA34D /* pushnotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pushnotes.entitlements; sourceTree = "<group>"; };
+		92D4506C3D407459154122F0 /* Pods-pushnotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushnotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-pushnotes/Pods-pushnotes.release.xcconfig"; sourceTree = "<group>"; };
+		BDDEC8875AAC5315D30AFDEA /* Pods-pushnotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushnotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pushnotes/Pods-pushnotes.debug.xcconfig"; sourceTree = "<group>"; };
+		E016DE04C11D0862D4D9321A /* Pods_pushnotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pushnotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973830946EEE764B8710CFC9 /* Pods_pushnotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06F3C501AF49D03AAC1782D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E016DE04C11D0862D4D9321A /* Pods_pushnotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D528F65C76CF3EC0666675C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDDEC8875AAC5315D30AFDEA /* Pods-pushnotes.debug.xcconfig */,
+				92D4506C3D407459154122F0 /* Pods-pushnotes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		206A83EC1D9A7AE800FEA34D = {
 			isa = PBXGroup;
 			children = (
 				206A83F71D9A7AE900FEA34D /* pushnotes */,
 				206A83F61D9A7AE900FEA34D /* Products */,
+				0D528F65C76CF3EC0666675C /* Pods */,
+				06F3C501AF49D03AAC1782D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +81,13 @@
 		206A83F71D9A7AE900FEA34D /* pushnotes */ = {
 			isa = PBXGroup;
 			children = (
+				206A840C1D9A80DD00FEA34D /* pushnotes.entitlements */,
 				206A83F81D9A7AE900FEA34D /* AppDelegate.swift */,
 				206A83FA1D9A7AE900FEA34D /* ViewController.swift */,
 				206A83FC1D9A7AE900FEA34D /* Main.storyboard */,
 				206A83FF1D9A7AE900FEA34D /* Assets.xcassets */,
 				206A84011D9A7AE900FEA34D /* LaunchScreen.storyboard */,
+				206A840A1D9A7C4F00FEA34D /* GoogleService-Info.plist */,
 				206A84041D9A7AE900FEA34D /* Info.plist */,
 			);
 			path = pushnotes;
@@ -71,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 206A84071D9A7AE900FEA34D /* Build configuration list for PBXNativeTarget "pushnotes" */;
 			buildPhases = (
+				CBBFF3166437C54EE7A8119E /* [CP] Check Pods Manifest.lock */,
 				206A83F11D9A7AE800FEA34D /* Sources */,
 				206A83F21D9A7AE800FEA34D /* Frameworks */,
 				206A83F31D9A7AE800FEA34D /* Resources */,
+				D03E73496A8474D98629CF2E /* [CP] Embed Pods Frameworks */,
+				BC83D615DCBFC699329BC262 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +130,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9REL2JA4G6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -127,10 +164,59 @@
 				206A84031D9A7AE900FEA34D /* LaunchScreen.storyboard in Resources */,
 				206A84001D9A7AE900FEA34D /* Assets.xcassets in Resources */,
 				206A83FE1D9A7AE900FEA34D /* Main.storyboard in Resources */,
+				206A840B1D9A7C4F00FEA34D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC83D615DCBFC699329BC262 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pushnotes/Pods-pushnotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBBFF3166437C54EE7A8119E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D03E73496A8474D98629CF2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pushnotes/Pods-pushnotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		206A83F11D9A7AE800FEA34D /* Sources */ = {
@@ -257,10 +343,13 @@
 		};
 		206A84081D9A7AE900FEA34D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDEC8875AAC5315D30AFDEA /* Pods-pushnotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pushnotes/pushnotes.entitlements;
 				DEVELOPMENT_TEAM = 9REL2JA4G6;
 				INFOPLIST_FILE = pushnotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bwlch.pushnotes.pushnotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,10 +359,13 @@
 		};
 		206A84091D9A7AE900FEA34D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D4506C3D407459154122F0 /* Pods-pushnotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pushnotes/pushnotes.entitlements;
 				DEVELOPMENT_TEAM = 9REL2JA4G6;
 				INFOPLIST_FILE = pushnotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bwlch.pushnotes.pushnotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +392,7 @@
 				206A84091D9A7AE900FEA34D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
